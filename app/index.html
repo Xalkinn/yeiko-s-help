@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html x-ng-app="yeiko">
+<head>
+  <meta charset="UTF-8">
+  <title>Site Yeiko</title>
+
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Ajout des fichiers pour angularJS -->
+  <script src="yeikomodule/yeiko.js"></script>
+  <script src="yeikomodule/service/serviceYeiko.js"></script>
+  <script src="yeikomodule/controller/controllerYeiko.js"></script>
+  <script src="yeikomodule/route/routeYeiko.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!-- Menu for navigation through the website -->
+<header x-ng-include="'templates/menu.html'" x-ng-controller="controllerYeiko">
+</header>
+
+<main class="container" x-ng-view></main>
+
+</body>
+</html>
